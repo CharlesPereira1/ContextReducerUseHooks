@@ -15,9 +15,9 @@ export default function CountProvider({ children }) {
 
 // useHook criado
 export function useCount() {
-  const { count, setCount } = useContext(CountContext);
+  const context = useContext(CountContext);
 
-  // const { count, setCount } = context;
+  const { count, setCount } = context;
 
   return { count, setCount };
 }
