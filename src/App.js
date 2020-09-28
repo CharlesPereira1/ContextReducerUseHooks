@@ -3,7 +3,7 @@ import React from "react";
 import CountProvider from "./context/Count";
 
 import Counter from "./components/Counter";
-import Mirror from "./components/Mirror";
+import SeparateComponent from "./components/SeparateComponent";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
 
       <hr />
 
-      <Mirror />
+      <SeparateComponent />
     </CountProvider>
   );
 }

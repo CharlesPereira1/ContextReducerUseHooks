@@ -3,17 +3,14 @@ import React from "react";
 import { useCount } from "../../context/Count";
 
 function Counter() {
-  const { count, setCount } = useCount();
+  const { state, dispatch } = useCount();
 
   return (
     <div>
-      <span>
-        <b>Count: </b> {count}
-      </span>
+      <h5>Count: {state.count}</h5>
+      <button onClick={() => dispatch({ type: "increment" })}> + </button>
 
-      <br />
-
-      <button onClick={() => setCount(count + 1)}>Incremente</button>
+      <button onClick={() => dispatch({ type: "decrement" })}> - </button>
     </div>
   );
 }
