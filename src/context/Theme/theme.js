@@ -21,9 +21,17 @@ const themeContext = createContext();
 
 export default function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(themes[1]);
+  const [click, setClick] = useState(false);
+
+  export function gradient() {
+    setClick(!click);
+    if (click) {
+      setTheme(themes[0]);
+    }
+  }
 
   return (
-    <themeContext.Provider value={{ theme, setTheme }}>
+    <themeContext.Provider value={{ theme, gradient }}>
       {children}
     </themeContext.Provider>
   );
@@ -31,7 +39,7 @@ export default function ThemeProvider({ children }) {
 
 // useHook criado
 export function usetheme() {
-  const { theme, setTheme } = useContext(themeContext);
+  const { theme, gradient } = useContext(themeContext);
 
-  return { theme, setTheme };
+  return { theme, gradient };
 }
