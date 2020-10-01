@@ -1,8 +1,5 @@
 import React, { createContext, useReducer, useContext } from "react";
-import { reducer } from "./reducer";
-
-//criacao do contexto com estado inicial
-const initialState = { count: 100 };
+import { initialState, reducer } from "./reducer";
 
 const CountContext = createContext(initialState);
 

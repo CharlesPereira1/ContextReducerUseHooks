@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 import CountProvider from "./Count/context";
 import ThemeProvider from "./Theme/context";
@@ -9,4 +9,4 @@ const GlobalContext = ({ children }) => (
   </CountProvider>
 );
 
-export default GlobalContext;
+export default memo(GlobalContext);
