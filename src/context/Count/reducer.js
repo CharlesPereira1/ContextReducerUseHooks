@@ -1,6 +1,6 @@
 /* eslint-disable default-case */
 //criacao do contexto com estado inicial
-export const initialState = { count: 100 };
+export const initialState = { count: 10 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
