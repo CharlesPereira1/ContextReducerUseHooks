@@ -1,13 +1,5 @@
 import React, { createContext, useReducer, useContext } from "react";
-
-let reducer = (state, action) => {
-  switch (action.type) {
-    case "increment":
-      return { ...state, count: state.count + 1 };
-    case "decrement":
-      return { ...state, count: state.count - 1 };
-  }
-};
+import { reducer } from "./reducer";
 
 //criacao useContext
 const initialState = { count: 100 };

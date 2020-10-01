@@ -1,19 +1,19 @@
 import React from "react";
 
-import CountProvider from "./context/Count";
+import GlobalContext from "./context/GlobalContext";
 
 import Counter from "./components/Counter";
 import SeparateComponent from "./components/SeparateComponent";
 
 function App() {
   return (
-    <CountProvider>
+    <GlobalContext>
       <Counter />
 
       <hr />
 
       <SeparateComponent />
-    </CountProvider>
+    </GlobalContext>
   );
 }
 
