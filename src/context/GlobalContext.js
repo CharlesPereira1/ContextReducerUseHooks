@@ -1,10 +1,12 @@
 import React from "react";
 
-import CountProvider from "./Count";
-import ThemeProvider from "./Theme";
+import CountProvider from "./Count/context";
+import ThemeProvider from "./Theme/context";
 
-export default function GlobalContext({ children }) {
+const GlobalContext = ({ children }) => (
   <CountProvider>
     <ThemeProvider>{children}</ThemeProvider>
-  </CountProvider>;
-}
+  </CountProvider>
+);
+
+export default GlobalContext;

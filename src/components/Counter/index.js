@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useCount } from "../../context/Count";
+import { useCount } from "../../context/Count/context";
 
 function Counter() {
   const { state, dispatch } = useCount();

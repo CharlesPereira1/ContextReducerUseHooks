@@ -16,11 +16,11 @@ export default function CountProvider({ children }) {
   );
 }
 
-// useHook criado
+// Criaçao de um Hook
 export function useCount() {
   const context = useContext(CountContext);
 
-  if (!context) throw new Error("useCount mus be used within a CountProvider");
+  if (!context) throw new Error("Count deve ser usado dentro e um provider");
 
   const { state, dispatch } = context;
 

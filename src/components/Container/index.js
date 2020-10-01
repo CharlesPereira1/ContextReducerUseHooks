@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useTheme } from "../../context/Theme";
+import { useTheme } from "../../context/Theme/context";
 
 import Counter from "../Counter";
 import SeparateComponent from "../SeparateComponent";
